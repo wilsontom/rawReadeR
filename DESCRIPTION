@@ -1,4 +1,4 @@
-Package: rawReadR
+Package: rawReadeR
 Type: Package
 Title: Access Thermo .RAW files in R
 Version: 0.1
