@@ -1,9 +1,8 @@
-#### rawReadeR [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+# rawReadeR [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 
- > read Thermo .RAW data into R
+ > __read Thermo .RAW data into R__
 
-
-##### What is rawReadeR ?
+#### What is rawReadeR ?
 
 rawReadeR is an R package that uses the MSFileReader.dll to access Thermo .RAW files without the need for any propiotory software or third party conversion to a different format.
 
