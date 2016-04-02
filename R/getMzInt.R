@@ -25,7 +25,7 @@ getMzInt <- function(filename, scans = c())
 	
 	MzIntMat <- NULL
 	for(i in 1:length(MzIntSplit)){
-		MzIntMat[[i]] <- sapply(MZIntSplit[[i]], function(x)(matrix(as.numeric(x),nrow = 2)))
+		MzIntMat[[i]] <- sapply(MzIntSplit[[i]], function(x)(matrix(as.numeric(x),nrow = 2)))
 	}
 	MzIntMat <- sapply(MzIntMat, t)
 	
