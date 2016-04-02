@@ -3,5 +3,7 @@
 export(getBValues)
 export(getCValues)
 export(getITtime)
+export(getMzInt)
 export(getRFComp)
 export(getResComp)
+export(getSpaceComp)
