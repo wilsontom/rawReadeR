@@ -80,7 +80,7 @@ int main(int argc, char *argv[])
 
         for (long i  = 0; i < dim; i++)
 	    {
-		cout << pdval[((i)* 6) + 0] << ":" << pdval[((i)* 6) + 1] << ":" << pdval[((i)* 6) + 4] << endl;
+		cout << pdval[((i)* 6) + 0] << ":" << pdval[((i)* 6) + 1] << endl;
         }
      
     
