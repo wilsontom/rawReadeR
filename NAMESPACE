@@ -3,3 +3,5 @@
 export(getBValues)
 export(getCValues)
 export(getITtime)
+export(getRFComp)
+export(getResComp)
