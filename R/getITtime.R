@@ -21,7 +21,7 @@ getITtime <- function(filename, scans = c())
 		IT[i] <- shell(paste(system.file("bin/GetIT.exe", package = "rawReadeR"), filename, scans[i], sep = " "), intern = TRUE)
 	}
 	
-	IT <- gsub("Ion Injection Time (ms):", "", IT)
+	IT <- gsub("Ion Injection Time \\(ms\\): ", "", IT)
 	
 	return(as.numeric(IT))
 	}
