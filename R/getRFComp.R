@@ -8,7 +8,7 @@
 #' 
 #' @author Tom Wilson \email{tpw2@@aber.ac.uk}
 #' @export
-#' @usage
+#' @examples
 #' \dontrun{
 #'	getRFComp(QC.raw, scans = c(2:24)	
 #'	}

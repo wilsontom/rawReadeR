@@ -8,7 +8,7 @@
 #' 
 #' @author Tom Wilson \email{tpw2@@aber.ac.uk}
 #' @export
-#' @usage
+#' @examples
 #' \dontrun{
 #'	getSpaceComp(QC.raw, scans = c(2:24)	
 #'	}

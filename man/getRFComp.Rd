@@ -4,9 +4,7 @@
 \alias{getRFComp}
 \title{Get RF Compensation}
 \usage{
-\dontrun{
-getRFComp(QC.raw, scans = c(2:24)	
-}
+getRFComp(filename, scans = c())
 }
 \arguments{
 \item{filename}{a \code{.raw} file}
@@ -18,6 +16,12 @@ a numeric vector of the RF compensation for each scan
 }
 \description{
 Get the RF mass compensation (ppm) for each scan in a given range
+}
+\examples{
+\dontrun{
+getRFComp(QC.raw, scans = c(2:24)	
+}
+
 }
 \author{
 Tom Wilson \email{tpw2@aber.ac.uk}

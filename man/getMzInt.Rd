@@ -4,9 +4,7 @@
 \alias{getMzInt}
 \title{Get Mass and Intensity}
 \usage{
-\dontrun{
-getMzInt(QC.raw, scans = c(2:24)	
-}
+getMzInt(filename, scans = c())
 }
 \arguments{
 \item{filename}{a \code{.raw} file}
@@ -18,6 +16,12 @@ a list of matrices for m/z and intensity.
 }
 \description{
 Get the profile data (m/z and intensity) across a given scan range
+}
+\examples{
+\dontrun{
+getMzInt(QC.raw, scans = c(2:24)	
+}
+
 }
 \author{
 Tom Wilson \email{tpw2@aber.ac.uk}

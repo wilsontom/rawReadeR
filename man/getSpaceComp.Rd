@@ -4,9 +4,7 @@
 \alias{getSpaceComp}
 \title{Get Space Charge Compensation}
 \usage{
-\dontrun{
-getSpaceComp(QC.raw, scans = c(2:24)	
-}
+getSpaceComp(filename, scans = c())
 }
 \arguments{
 \item{filename}{a \code{.raw} file}
@@ -18,6 +16,12 @@ a numeric vector of the space charge compensation for each scan
 }
 \description{
 Get the space charge mass compensation (ppm) for each scan in a given range
+}
+\examples{
+\dontrun{
+getSpaceComp(QC.raw, scans = c(2:24)	
+}
+
 }
 \author{
 Tom Wilson \email{tpw2@aber.ac.uk}

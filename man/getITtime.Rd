@@ -4,9 +4,7 @@
 \alias{getITtime}
 \title{Get Ion Injection Time}
 \usage{
-\dontrun{
-getITtime(QC.raw, scans = c(2:24)	
-}
+getITtime(filename, scans = c())
 }
 \arguments{
 \item{filename}{a \code{.raw} file}
@@ -18,6 +16,12 @@ a numeric vector of the Ion Injection Time for each scan
 }
 \description{
 Get the ion injection time (IT) for each scan in a given range
+}
+\examples{
+\dontrun{
+getITtime(QC.raw, scans = c(2:24)	
+}
+
 }
 \author{
 Tom Wilson \email{tpw2@aber.ac.uk}

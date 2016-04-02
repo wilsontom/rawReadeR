@@ -4,9 +4,7 @@
 \alias{getMzIntNoise}
 \title{Get Mass, Intensity and Noise}
 \usage{
-\dontrun{
-getMzIntNoise(QC.raw, scans = c(2:24)	
-}
+getMzIntNoise(filename, scans = c())
 }
 \arguments{
 \item{filename}{a \code{.raw} file}
@@ -18,6 +16,12 @@ a list of matrices for m/z, intensity and noise
 }
 \description{
 Get the profile data (m/z, intensity and noise) across a given scan range
+}
+\examples{
+\dontrun{
+getMzIntNoise(QC.raw, scans = c(2:24)	
+}
+
 }
 \author{
 Tom Wilson \email{tpw2@aber.ac.uk}

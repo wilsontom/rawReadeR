@@ -4,9 +4,7 @@
 \alias{getResComp}
 \title{Get Resolution Compensation}
 \usage{
-\dontrun{
-getResComp(QC.raw, scans = c(2:24)	
-}
+getResComp(filename, scans = c())
 }
 \arguments{
 \item{filename}{a \code{.raw} file}
@@ -18,6 +16,12 @@ a numeric vector of the Resolution compensation for each scan
 }
 \description{
 Get the Resolution mass compensation (ppm) for each scan in a given range
+}
+\examples{
+\dontrun{
+getResComp(QC.raw, scans = c(2:24)	
+}
+
 }
 \author{
 Tom Wilson \email{tpw2@aber.ac.uk}

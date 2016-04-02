@@ -4,9 +4,7 @@
 \alias{getBValues}
 \title{Get B Value}
 \usage{
-\dontrun{
-getBValues(QC.raw, scans = c(2:24)	
-}
+getBValues(filename, scans = c())
 }
 \arguments{
 \item{filename}{a \code{.raw} file}
@@ -18,6 +16,12 @@ a numeric vector of the B value for each scan
 }
 \description{
 Get the FT-MS conversion parameter \code{B} for each scan in a given range
+}
+\examples{
+\dontrun{
+getBValues(QC.raw, scans = c(2:24)	
+}
+
 }
 \author{
 Tom Wilson \email{tpw2@aber.ac.uk}
