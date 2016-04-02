@@ -1,11 +1,11 @@
 Package: rawReadeR
 Type: Package
-Title: Access Thermo .RAW files in R
+Title: Read Thermo .RAW files in R
 Version: 0.1
 Date: 2016-02-24
 Author: Tom Wilson <tpw2@aber.ac.uk>
 Maintainer: Tom Wilson <tpw2@aber.ac.uk>
-Description: A series of C++ functions are used to access functions within the Thermo MSFileReader.dll. Each C++ function is desgined for single file and single scan input. Corresponding R functions and shell call are used as multi scan and multi file wrappers to the C++ functions, via the pre-compiled binary executables. 
+Description: A series of C++ functions are used to access the Thermo MSFileReader.dll.  Each C++ function is designed for single file and single scan input; corresponding R functions and system calls are used as multi scan and multi file wrappers to the C++ functions, via the pre-compiled binary executables.
 License: GPL (>= 3)
 URL: https://github.com/wilsontom/rawReadeR
 BugReports: https://github.com/wilsontom/rawReadeR/issues
