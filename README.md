@@ -1,4 +1,4 @@
-# rawReadeR [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active) [![License](https://img.shields.io/badge/license-GNU%20General%20Public%20License%20v3.0-blue.svg "GNU GPL v3.0")](https://raw.githubusercontent.com/wilsontom/rawReadeR/blob/master/LICENSE)
+# rawReadeR [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active) [![Build status](https://ci.appveyor.com/api/projects/status/x6r218kf1v51oqiq/branch/master?svg=true)](https://ci.appveyor.com/project/wilsontom/rawreader/branch/master) [![License](https://img.shields.io/badge/license-GNU%20General%20Public%20License%20v3.0-blue.svg "GNU GPL v3.0")](https://raw.githubusercontent.com/wilsontom/rawReadeR/master/LICENSE)
 
  > __read Thermo .RAW data into R__
 
