@@ -4,9 +4,9 @@
 
 #### What is rawReadeR ?
 
-`rawReadeR` is an R package that provides a series of functions which act as an interface to the `MSFileReader.dll` The `MSFileReader.dll` is accessed _via_ [C++ functions](https://github.com/wilsontom/rawReadeR/tree/master/inst/src) and the corresponding [compiled binaries]( https://github.com/wilsontom/rawReadeR/tree/master/inst/bin) are utilised through a `R` wrappers.
+`rawReadeR` is an R/C++ API to the `MSFileReader.dll`.  
 
-`rawReadeR` allows for m/z profiles and scan header data to be extracted from `.RAW` files without the need for manual extraction using `Xcalibur` or conversion to a more universal format (`.mzML`, `.mZXML`, etc...)
+The `MSFileReader.dll` is accessed _via_ [C++ functions](https://github.com/wilsontom/rawReadeR/tree/master/inst/src) and the corresponding [compiled binaries]( https://github.com/wilsontom/rawReadeR/tree/master/inst/bin) are utilised through a `R` wrappers.  `rawReadeR` allows for m/z profiles and scan header data to be extracted from `.RAW` files without the need for manual extraction using `Xcalibur` or conversion to a more universal format (`.mzML`, `.mZXML`, etc...)
 
 #### Installation
 
