@@ -16,10 +16,8 @@
 getRFComp <- function(filename, scans = c())
 	{
 	options(digits = 15)
-	RFcomp <- NULL
-	for(i in 1:length(scans)){
-		RFcomp[i] <- shell(paste(system.file("bin/GetRFComp.exe", package = "rawReadeR"), filename, scans[i], sep = " "), intern = TRUE)
-	}
+		
+	RFcomp <- sapply(scans, function(x)(shell(paste(system.file("bin/GetRFComp.exe", package = "rawReadeR"), filename, x, sep = " "), intern = TRUE)))
 	
 	RFcomp <- gsub("RF Comp. \\(ppm\\): ", "", RFcomp)
 	

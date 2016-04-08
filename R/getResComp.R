@@ -16,10 +16,10 @@
 getResComp <- function(filename, scans = c())
 	{
 	options(digits = 15)
-	ResComp <- NULL
-	for(i in 1:length(scans)){
-		ResComp[i] <- shell(paste(system.file("bin/GetResComp.exe", package = "rawReadeR"), filename, scans[i], sep = " "), intern = TRUE)
-	}
+	
+	
+	ResComp <- sapply(scans, function(x)(shell(paste(system.file("bin/GetResComp.exe", package = "rawReadeR"), filename, x, sep = " "), intern = TRUE)))
+	
 	
 	ResComp <- gsub("Resolution Comp. \\(ppm\\): ", "", ResComp)
 	

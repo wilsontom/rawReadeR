@@ -16,10 +16,8 @@
 getSpaceComp <- function(filename, scans = c())
 	{
 	options(digits = 15)
-	SpaceComp <- NULL
-	for(i in 1:length(scans)){
-		SpaceComp[i] <- shell(paste(system.file("bin/GetSpaceChargeComp.exe", package = "rawReadeR"), filename, scans[i], sep = " "), intern = TRUE)
-	}
+
+	SpaceComp <- sapply(scans, function(x)(shell(paste(system.file("bin/GetSpaceChargeComp.exe", package = "rawReadeR"), filename, x, sep = " "), intern = TRUE)))
 	
 	SpaceComp <- gsub("Space Charge Comp. \\(ppm\\): ", "", SpaceComp)
 	

@@ -16,10 +16,7 @@
 getBValues <- function(filename, scans = c())
 	{
 	options(digits = 15)
-	BVal <- NULL
-	for(i in 1:length(scans)){
-		BVal[i] <- shell(paste(system.file("bin/GetBValue.exe", package = "rawReadeR"), filename, scans[i], sep = " "), intern = TRUE)
-	}
+	BVal <- sapply(scans, function(x)(shell(paste(system.file("bin/GetBValue.exe", package = "rawReadeR"), filename, x, sep = " "), intern = TRUE)))
 	
 	BVals <- gsub("Conversion Parameter B:", "", BVal)
 	
