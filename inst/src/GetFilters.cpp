@@ -52,7 +52,9 @@ int main(int argc, char *argv[])
 	{
 		wcout << pbstrFilters[i] << endl;
 	}
-	SafeArrayDestroy(psa);
+	// Delete SafeArray's
+	SafeArrayUnaccessData( psa);
+	SafeArrayDestroy( psa);
 
 	// end
 }

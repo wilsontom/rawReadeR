@@ -68,4 +68,11 @@ int main(int argc, char *argv[])
     
     wcout << pbstrLabels[8] << ": "<< pbstrValues[8] << endl;
         
-}
+	// Delete SafeArray's
+	SafeArrayUnaccessData( psaLabels);
+	SafeArrayDestroy( psaLabels);
+	SafeArrayUnaccessData( psaValues);
+	SafeArrayDestroy( psaValues);
+	
+	// end
+}	

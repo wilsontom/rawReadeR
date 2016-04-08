@@ -82,7 +82,8 @@ int main(int argc, char *argv[])
 	    {
 		cout << pdval[((i)* 6) + 0] << ":" << pdval[((i)* 6) + 1] << endl;
         }
-     
+    
+	// end
     
    // if (flag == "resolution"){
         // for (long i  = 0; i < dim; i++)

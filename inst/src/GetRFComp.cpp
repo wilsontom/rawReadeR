@@ -67,5 +67,12 @@ int main(int argc, char *argv[])
     SafeArrayAccessData( psaValues, (void**)(&pbstrValues));
     
     wcout << pbstrLabels[13] << ": "<< pbstrValues[13] << endl;
-        
+	
+	// Delete SafeArray's
+	SafeArrayUnaccessData( psaLabels);
+	SafeArrayDestroy( psaLabels);
+	SafeArrayUnaccessData( psaValues);
+	SafeArrayDestroy( psaValues);
+	
+	// end        
 }
