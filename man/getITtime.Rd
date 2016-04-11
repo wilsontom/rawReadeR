@@ -12,7 +12,7 @@ getITtime(filename, scans = c())
 \item{scans}{a numeric vector of scan numbers to extract}
 }
 \value{
-a numeric vector of the Ion Injection Time for each scan
+a numeric vector of the ion injection time for each scan
 }
 \description{
 Get the ion injection time (IT) for each scan in a given range

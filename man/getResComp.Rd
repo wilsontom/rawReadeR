@@ -12,7 +12,7 @@ getResComp(filename, scans = c())
 \item{scans}{a numeric vector of scan numbers to extract}
 }
 \value{
-a numeric vector of the Resolution compensation for each scan
+a numeric vector of the resolution compensation for each scan
 }
 \description{
 Get the Resolution mass compensation (ppm) for each scan in a given range

@@ -11,17 +11,17 @@ compileAll(filepath)
 }
 \description{
 Wrapper function which compiles all \code{.cpp} files into executables (\code{.exe}). 
-The Microsoft Visual Studio \code{vcvars323.bat} file is used to set paths and environment
-variables, so that this function can be simply executed to the Windows \code{cmd} line from
+The Microsoft Visual Studio \code{vcvars323.bat} file is used to set include paths and environment
+variables, so that this function can be simply executed in the Windows \code{cmd} line from
 an R session, as opposed to manually compiling all \code{.cpp} files through the Visual Studio
 C++ Developers Command Prompt. See \link{https://github.com/wilsontom/rawReadeR/blob/master/README.md} for 
-futher details in installation.
+futher details on installation.
 }
 \examples{
 \dontrun{
  options(VSPATH = "<path_to_visual_studio_vcvars32.bat>")
  source("rawReadeR/R/compileAll.R") 
- compileAll("C:/User/Downloads/rawReadeR")
+ compileAll("C:/rawReadeR")
 }
 
 }
