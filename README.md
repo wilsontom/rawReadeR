@@ -9,30 +9,38 @@
 #### Installation
  __N.B `rawReadeR` can only be installed on a Windows Operating System__
 
-1. [Download](https://thermo.flexnetoperations.com/control/thmo/login?nextURL=%2Fcontrol%2Fthmo%2Fdownload%3Felement%3D63066 77) the `MSFileReader`
+##### Step 1
+ - [Download](https://thermo.flexnetoperations.com/control/thmo/login?nextURL=%2Fcontrol%2Fthmo%2Fdownload%3Felement%3D63066 77) the `MSFileReader`
  - The `MSFileReader` filepath needs to be `C:\Thermo\MSFileReader.XRawfile2.dll`
  - The `.dll` can then be registered using the following command from a Command Prompt with Administrator privileges 
   ```sh 
   regsvr32 C:\Thermo\MSFileReader.XRawfile2.dll
   ```
-2. Download and install Microsoft Visual Studio
-3. Clone the repository
+  
+##### Step 2 
+ - Clone the repository
 ```sh
 git clone https://github.com/wilsontom/rawReadeR
 ```
-4. To prevent having to distibute compied executables with the package, these need to be compiled prior to package installation. Start a new R session and enter the following;
+##### Step 3
+To prevent having to distibute compied executables with the package, these need to be compiled prior to package installation. Start a new R session and enter the following;
+
 ```R
 setwd("rawReadeR")
 options(VSPATH = "<path_to_visual_studio_vcvars32.bat>")
 ource("rawReadeR/R/compileAll.R") 
 compileAll(getwd())
 ```
-5. Finally, build and install.
+
+##### Step 4
+Finally, build and install.
+
 ```sh
 R CMD build RawReadeR
 R CMD INSTALL RawReadeR_0.1.0_tar.gz
 ```
-6. To check everything has compiled and installed ok...
+##### Step 5
+To check everything has compiled and installed ok...
 ```R
 library(rawReadeR
 testPackage(scans = c(1:10)
