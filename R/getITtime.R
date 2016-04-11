@@ -4,7 +4,7 @@
 #'
 #' @param filename a \code{.raw} file
 #' @param scans a numeric vector of scan numbers to extract
-#' @return a numeric vector of the Ion Injection Time for each scan
+#' @return a numeric vector of the ion injection time for each scan
 #' 
 #' @author Tom Wilson \email{tpw2@@aber.ac.uk}
 #' @export
