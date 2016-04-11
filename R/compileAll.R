@@ -66,7 +66,7 @@ compileAll <- function(filepath)
 	write(binFiles, file = "BinaryFiles")
 	
 	## done
-	message("...Compilation complete, rawReader is ready for installation", "\n")
+	message("...Compilation complete.  rawReadeR is ready for installation", "\n")
 	
 	return(invisible(NULL))
 	}
