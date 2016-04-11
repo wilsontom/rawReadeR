@@ -14,7 +14,7 @@ Wrapper function which compiles all \code{.cpp} files into executables (\code{.e
 The Microsoft Visual Studio \code{vcvars323.bat} file is used to set include paths and environment
 variables, so that this function can be simply executed in the Windows \code{cmd} line from
 an R session, as opposed to manually compiling all \code{.cpp} files through the Visual Studio
-C++ Developers Command Prompt. See \link{https://github.com/wilsontom/rawReadeR/blob/master/README.md} for 
+C++ Developers Command Prompt. See \url{https://github.com/wilsontom/rawReadeR/blob/master/README.md} for 
 futher details on installation.
 }
 \examples{

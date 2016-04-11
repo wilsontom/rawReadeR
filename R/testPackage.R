@@ -15,7 +15,7 @@
 
 testPackage <- function(scans = c(1:5))
 	{
-	rawFile <- system.file("data", "testfile.raw", package = "rawReadeR")
+	rawFile <- system.file("extdata", "testfile.raw", package = "rawReadeR")
 
 	if(!is.numeric(getBValues(rawFile, scans))){
 		message("..Error found in 'getBValues'")
