@@ -17,7 +17,7 @@ getCValues <- function(filename, scans = c())
 	{
 	options(digits = 15)
 	
-	CVal[i] <- sapply(scans, function(x)(shell(paste(system.file("bin/GetCValue.exe", package = "rawReadeR"), filename, x, sep = " "), intern = TRUE)))
+	CVal <- sapply(scans, function(x)(shell(paste(system.file("bin/GetCValue.exe", package = "rawReadeR"), filename, x, sep = " "), intern = TRUE)))
 	CVals <- gsub("Conversion Parameter C:", "", CVal)
 	
 	return(as.numeric(CVals))
