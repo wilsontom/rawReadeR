@@ -15,21 +15,24 @@
 #'
 #' @examples 
 #'	\dontrun{
-#'  options(VCPATH = "<path_to_visual_studio_vcvars32.bat>")
+#'  options(VSPATH = "<path_to_visual_studio_vcvars32.bat>")
+#'  source("rawReadeR/R/compileAll.R") 
 #'  compileAll("C:/User/Downloads/rawReadeR")
 #'	}
 #'
 compileAll <- function(filepath)
 	{
 	
-	if(is.null(getOption("VCPATH"))){
+	if(is.null(getOption("VSPATH"))){
 		stop("...The vcvars32.bat filepath has not been set in options. This MUST be done before compiliation", call. = FALSE)
 	}
 	
 	## use working directories to make things a bit easier
 	
 	# start off in the source directory
-	setwd(filepath)
+	if(getwd() != filepath){
+		setwd(filepath)}
+	
 	topDir <- getwd()
 	
 	# make bin directory for .exe
@@ -58,7 +61,7 @@ compileAll <- function(filepath)
 	}
 	
 	# write binaryFile (this will prevent R CMD CHECK warnings)	
-	setwd("rawReadeR")
+	setwd(topDir)
 	binFiles <- list.files("inst/bin", pattern = ".exe", full = TRUE)
 	write(binFiles, file = "BinaryFiles")
 	
