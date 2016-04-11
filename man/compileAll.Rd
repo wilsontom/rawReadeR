@@ -19,7 +19,8 @@ futher details in installation.
 }
 \examples{
 \dontrun{
- options(VCPATH = "<path_to_visual_studio_vcvars32.bat>")
+ options(VSPATH = "<path_to_visual_studio_vcvars32.bat>")
+ source("rawReadeR/R/compileAll.R") 
  compileAll("C:/User/Downloads/rawReadeR")
 }
 
