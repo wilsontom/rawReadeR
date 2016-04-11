@@ -4,32 +4,38 @@
 
 #### What is rawReadeR ?
 
-`rawReadeR` is an R/C++ API to the `MSFileReader.dll`.  
-
-The `MSFileReader.dll` is accessed _via_ [C++ functions](https://github.com/wilsontom/rawReadeR/tree/master/inst/src) and the corresponding [compiled binaries]( https://github.com/wilsontom/rawReadeR/tree/master/inst/bin) are utilised through a `R` wrappers.  `rawReadeR` allows for m/z profiles and scan header data to be extracted from `.RAW` files without the need for manual extraction using `Xcalibur` or conversion to a more universal format (`.mzML`, `.mZXML`, etc...)
+`rawReadeR` is an R/C++ API to the `MSFileReader.dll`.  `rawReadeR` allows for m/z profiles and scan header data to be extracted from `.RAW` files without the need for manual extraction using `Xcalibur` or conversion to a more universal format (`.mzML`, `.mZXML`, etc...)
 
 #### Installation
+ __N.B `rawReadeR` can only be installed on a Windows Operating System__
 
-To install `rawReadR`;
+1. [Download](https://thermo.flexnetoperations.com/control/thmo/login?nextURL=%2Fcontrol%2Fthmo%2Fdownload%3Felement%3D63066 77) the `MSFileReader`
+ - The `MSFileReader` filepath needs to be `C:\Thermo\MSFileReader.XRawfile2.dll`
+ - The `.dll` can then be registered using the following command from a Command Prompt with Administrator privileges 
+  ```sh 
+  regsvr32 C:\Thermo\MSFileReader.XRawfile2.dll
+  ```
+2. Download and install Microsoft Visual Studio
+3. Clone the repository
+```sh
+git clone https://github.com/wilsontom/rawReadeR
+```
+4. To prevent having to distibute compied executables with the package, these need to be compiled prior to package installation. Start a new R session and enter the following;
 ```R
-devtools::install_github("wilsontom/rawReadR")
+setwd("rawReadeR")
+options(VSPATH = "<path_to_visual_studio_vcvars32.bat>")
+ource("rawReadeR/R/compileAll.R") 
+compileAll(getwd())
 ```
-__Due to the requirements of the `MSFileReader.dll`, `rawReadR` can only be installed on a Windows OS__
-
-The `MSFileReader.dll` also needs to be accessible and registered before using. First, [download](https://thermo.flexnetoperations.com/control/thmo/login?nextURL=%2Fcontrol%2Fthmo%2Fdownload%3Felement%3D6306677) the `MSFileReader`. Each `C++` source file contains a line indicating where the `.dll` can be accessed from;
-
-```cpp
-#import "C:\Thermo\MSFileReader.XRawfile2.dll"
+5. Finally, build and install.
+```sh
+R CMD build RawReadeR
+R CMD INSTALL RawReadeR_0.1.0_tar.gz
 ```
-All of the pre-compiled binaries in `/inst/bin/ `have been compiled using this `.dll` location.  If you wish to use a different path, then the `C++ #import` will need amending and the binaries re-compiled. To re-compile open the `Visual Studio Developers Command Prompt`;
-
-```bat
-cl /EHsc rawReadRfunction.cpp
-```
-Finally, the `.dll` needs to be registered. This can be done from a command prompt which has Administrator privileges;
-
-```bat
-regsvr32 C:\Thermo\MSFileReader.XRawfile2.dll
+6. To check everything has compiled and installed ok...
+```R
+library(rawReadeR
+testPackage(scans = c(1:10)
 ```
 
 
