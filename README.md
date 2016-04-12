@@ -12,7 +12,7 @@
  - [Download](https://thermo.flexnetoperations.com/control/thmo/login?nextURL=%2Fcontrol%2Fthmo%2Fdownload%3Felement%3D63066 77) the `MSFileReader`
  - The `MSFileReader` filepath needs to be `C:\Thermo\MSFileReader.XRawfile2.dll`
  - The `.dll` can then be registered using the following command from a Command Prompt with Administrator privileges 
-  ```sh 
+  ```
   regsvr32 C:\Thermo\MSFileReader.XRawfile2.dll
   ```
   
@@ -41,7 +41,7 @@ R CMD INSTALL RawReadeR_0.1.0_tar.gz
 ##### Step 5
 To check everything has compiled and installed ok...
 ```R
-library(rawReadeR
+library(rawReadeR)
 testPackage(scans = c(1:10)
 ```
 
