@@ -66,7 +66,13 @@ int main(int argc, char *argv[])
     SafeArrayAccessData( psaLabels, (void**)(&pbstrLabels));
     SafeArrayAccessData( psaValues, (void**)(&pbstrValues));
     
-    wcout << pbstrLabels[12] << ": "<< pbstrValues[12] << endl;
+
+	for (long i = 0; i<nArraySize; i++)
+	{
+		if (wcsstr(pbstrLabels[i], L"Temperature Comp. (ppm)") != 0) {
+			wcout << pbstrLabels[i] << ":" << pbstrValues[i] << endl;
+		}
+	}
 	
 	// Delete SafeArray's
 	SafeArrayUnaccessData( psaLabels);
