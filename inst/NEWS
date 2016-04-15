@@ -10,4 +10,3 @@ v0.1.1
 ------
 - R Wrapper for FilterForScan.exe
 - Bug fix in trailer data caused by ":" spacing in newer version of .RAW. 
-- Add .rmd vignette file document testing status for various .RAW versions and method types
