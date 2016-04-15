@@ -17,11 +17,13 @@ getResComp <- function(filename, scans = c())
 	{
 	options(digits = 15)
 	
-	
 	ResComp <- sapply(scans, function(x)(shell(paste(system.file("bin/GetResComp.exe", package = "rawReadeR"), filename, x, sep = " "), intern = TRUE)))
 	
-	
-	ResComp <- gsub("Resolution Comp. \\(ppm\\): ", "", ResComp)
+	if(length(grep("::", ResComp)) == length(ResComp)){
+		ResComp <- gsub("Resolution Comp. \\(ppm\\)::", "", ResComp)
+	}else{
+		ResComp <- gsub("Resolution Comp. \\(ppm\\):", "", ResComp)
+	}
 	
 	return(as.numeric(ResComp))
 	}

@@ -19,8 +19,11 @@ getITtime <- function(filename, scans = c())
 	
 	IT <- sapply(scans, function(x)(shell(paste(system.file("bin/GetIT.exe", package = "rawReadeR"), filename, x, sep = " "), intern = TRUE)))
 	
-	IT <- gsub("Ion Injection Time \\(ms\\): ", "", IT)
-	
+	if(length(grep("::", IT)) == length(IT)){
+		IT <- gsub("Ion Injection Time \\(ms\\)::", "", IT)
+	}else{
+		IT <- gsub("Ion Injection Time \\(ms\\):", "", IT)
+	}		
 	return(as.numeric(IT))
 	}
  

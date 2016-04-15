@@ -18,8 +18,11 @@ getBValues <- function(filename, scans = c())
 	options(digits = 15)
 	BVal <- sapply(scans, function(x)(shell(paste(system.file("bin/GetBValue.exe", package = "rawReadeR"), filename, x, sep = " "), intern = TRUE)))
 	
-	BVals <- gsub("Conversion Parameter B:", "", BVal)
-	
+	if(length(grep("::", BVal)) == length(BVal)){
+		BVals <- gsub("Conversion Parameter B::", "", BVal)
+	}else{
+		BVals <- gsub("Conversion Parameter B:", "", BVal)
+	}	
 	return(as.numeric(BVals))
 	}
  

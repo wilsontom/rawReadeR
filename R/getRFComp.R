@@ -19,8 +19,11 @@ getRFComp <- function(filename, scans = c())
 		
 	RFcomp <- sapply(scans, function(x)(shell(paste(system.file("bin/GetRFComp.exe", package = "rawReadeR"), filename, x, sep = " "), intern = TRUE)))
 	
-	RFcomp <- gsub("RF Comp. \\(ppm\\): ", "", RFcomp)
-	
+	if(length(grep("::", RFcomp)) == length(RFcomp)){
+		RFcomp <- gsub("RF Comp. \\(ppm\\)::", "", RFcomp)
+	}else{
+		RFcomp <- gsub("RF Comp. \\(ppm\\):", "", RFcomp)
+	}	
 	return(as.numeric(RFcomp))
 	}
  
