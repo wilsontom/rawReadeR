@@ -1,7 +1,7 @@
 Package: rawReadeR
 Type: Package
 Title: Read Thermo .RAW files in R
-Version: 0.1
+Version: 0.1.1
 Date: 2016-02-24
 Author: Tom Wilson <tpw2@aber.ac.uk>
 Maintainer: Tom Wilson <tpw2@aber.ac.uk>
