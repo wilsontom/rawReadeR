@@ -10,3 +10,7 @@ v0.1.1
 ------
 - R Wrapper for FilterForScan.exe
 - Bug fix in trailer data caused by ":" spacing in newer version of .RAW. 
+- Use paramater names not indexs in trailer data extract functions. Fixes bug caused by different lengths are trailer data in 
+  different file versions
+  
+  
