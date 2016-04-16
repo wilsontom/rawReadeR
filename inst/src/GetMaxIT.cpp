@@ -66,7 +66,14 @@ int main(int argc, char *argv[])
     SafeArrayAccessData( psaLabels, (void**)(&pbstrLabels));
     SafeArrayAccessData( psaValues, (void**)(&pbstrValues));
     
-    wcout << pbstrLabels[5] << ": "<< pbstrValues[5] << endl;
+
+	for (long i = 0; i<nArraySize; i++)
+	{
+		if (wcsstr(pbstrLabels[i], L"Max. Ion Time (ms)") != 0) {
+			wcout << pbstrLabels[i] << ":" << pbstrValues[i] << endl;
+		}
+	}
+
 	
 	// Delete SafeArray's
 	SafeArrayUnaccessData( psaLabels);

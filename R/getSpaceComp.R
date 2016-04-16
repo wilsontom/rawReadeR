@@ -19,7 +19,11 @@ getSpaceComp <- function(filename, scans = c())
 
 	SpaceComp <- sapply(scans, function(x)(shell(paste(system.file("bin/GetSpaceChargeComp.exe", package = "rawReadeR"), filename, x, sep = " "), intern = TRUE)))
 	
-	SpaceComp <- gsub("Space Charge Comp. \\(ppm\\): ", "", SpaceComp)
+	if(length(grep("::", SpaceComp)) == length(SpaceComp)){
+		SpaceComp <- gsub("Space Charge Comp. \\(ppm\\)::", "", SpaceComp)
+	}else{
+		SpaceComp <- gsub("Space Charge Comp. \\(ppm\\):", "", SpaceComp)
+	}
 	
 	return(as.numeric(SpaceComp))
 	}

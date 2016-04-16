@@ -1,0 +1,16 @@
+NEWS
+----
+
+v0.1.0
+------
+- First stable releae
+- Depoisited with DOI 10.5291/zenodo.49513
+
+v0.1.1
+------
+- R Wrapper for FilterForScan.exe
+- Bug fix in trailer data caused by ":" spacing in newer version of .RAW. 
+- Use paramater names not indexs in trailer data extract functions. Fixes bug caused by different lengths are trailer data in 
+  different file versions
+  
+  

@@ -66,7 +66,15 @@ int main(int argc, char *argv[])
     SafeArrayAccessData( psaLabels, (void**)(&pbstrLabels));
     SafeArrayAccessData( psaValues, (void**)(&pbstrValues));
     
-    wcout << pbstrLabels[10] << ": "<< pbstrValues[10] << endl;
+
+	for (long i = 0; i<nArraySize; i++)
+	{
+		if (wcsstr(pbstrLabels[i], L"Conversion Parameter B")!=0) {
+			wcout << pbstrLabels[i] << ":" << pbstrValues[i] << endl;
+		}
+	}
+	
+    //wcout << pbstrLabels[10] << ": "<< pbstrValues[10] << endl;
 	
 	// Delete SafeArray's
 	SafeArrayUnaccessData( psaLabels);
