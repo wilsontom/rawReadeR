@@ -3,3 +3,4 @@
 .Rbuildignore
 .Rproj.user
 rawReadeR_versions.md
+inst/doc

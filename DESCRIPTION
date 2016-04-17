@@ -11,3 +11,6 @@ URL: https://github.com/wilsontom/rawReadeR
 BugReports: https://github.com/wilsontom/rawReadeR/issues
 LazyData: TRUE
 RoxygenNote: 5.0.1
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
