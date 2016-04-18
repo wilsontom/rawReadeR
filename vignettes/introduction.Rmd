@@ -26,7 +26,7 @@ Each version is contained in it's own isolated branch, and once stable will be m
 | PDA| Photodiode Array
 | ESI| Electrospray Ionisation
 | NSI| nano-Spray Ionisation
-
+| MSn| Tandem Mass Spectrometry
 
 
 
@@ -48,9 +48,9 @@ Each version is contained in it's own isolated branch, and once stable will be m
 
 |rawReadeR Version     | Method
 |:--------------------:|:-------------:|
-|0.1.0| 
-|0.1.1|
-|0.1.2|
+|0.1.0| FT-MS1
+|0.1.1| FT-MS1
+|0.1.2| FT-MS1,FT-MS1 + dd-HCD-FT-MS2
 |0.1.3|
 |0.1.4|
 |0.1.5|
