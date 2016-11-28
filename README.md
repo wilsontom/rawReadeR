@@ -6,17 +6,17 @@
 `rawReadeR` is an R/C++ API to the `MSFileReader.dll`.  `rawReadeR` allows for m/z profiles and scan header data to be extracted from `.RAW` files without the need for manual extraction using `Xcalibur` or conversion to a more universal format (`.mzML`, `.mZXML`, etc...)
 
 #### Installation
- __N.B `rawReadeR` can only be installed on a Windows Operating System__. Microsoft Visual Studio also needs to be installed to allow for compilation of `.cpp` files. 
+ __N.B `rawReadeR` can only be installed on a Windows Operating System__. Microsoft Visual Studio also needs to be installed to allow for compilation of `.cpp` files.
 
 ##### Step 1
  - [Download](https://thermo.flexnetoperations.com/control/thmo/login?nextURL=%2Fcontrol%2Fthmo%2Fdownload%3Felement%3D63066 77) the `MSFileReader`
  - The `MSFileReader` filepath needs to be `C:\Thermo\MSFileReader.XRawfile2.dll`
- - The `.dll` can then be registered using the following command from a Command Prompt with Administrator privileges 
+ - The `.dll` can then be registered using the following command from a Command Prompt with Administrator privileges
   ```
   regsvr32 C:\Thermo\MSFileReader.XRawfile2.dll
   ```
-  
-##### Step 2 
+
+##### Step 2
  - Clone the repository
 ```sh
 git clone https://github.com/wilsontom/rawReadeR
@@ -26,8 +26,8 @@ To prevent having to distibute compied executables with the package, these need 
 
 ```R
 setwd("rawReadeR")
-options(VSPATH = "<path_to_visual_studio_vcvars32.bat>")
-source("rawReadeR/R/compileAll.R") 
+options(VSPATH = "<path_to_visual_studio_vsvars32.bat>")
+source("rawReadeR/R/compileAll.R")
 compileAll(getwd())
 ```
 
