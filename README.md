@@ -9,7 +9,7 @@
  __N.B `rawReadeR` can only be installed on a Windows Operating System__. Microsoft Visual Studio also needs to be installed to allow for compilation of `.cpp` files.
 
 ##### Step 1
- - [Download](https://thermo.flexnetoperations.com/control/thmo/login?nextURL=%2Fcontrol%2Fthmo%2Fdownload%3Felement%3D63066 77) the `MSFileReader`
+ - [Download](https://thermo.flexnetoperations.com) the `MSFileReader`
  - The `MSFileReader` filepath needs to be `C:\Thermo\MSFileReader.XRawfile2.dll`
  - The `.dll` can then be registered using the following command from a Command Prompt with Administrator privileges
   ```
